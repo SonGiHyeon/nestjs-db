@@ -7,13 +7,13 @@ export const dbConfig = (
   const config: TypeOrmModuleOptions = {
     // Todo: DB Config를 완성시켜주세요.
     type: 'postgres',
-    host: '',
-    port: 0,
-    username: '',
-    password: '',
-    database: '',
+    host: 'localhost',
+    port: 5432,
+    username: 'songihyeon',
+    password: 'vb340578!',
+    database: 'tutorial_db',
     autoLoadEntities: true,
-    synchronize: true,
+    synchronize: false,
   };
 
   console.log('📦 DB 설정 정보:', {

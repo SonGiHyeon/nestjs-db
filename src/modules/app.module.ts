@@ -11,6 +11,9 @@ import { AuthModule } from './auth/auth.module';
 // Entity
 import { User } from '../common/db/entities/user.entity';
 
+import * as crypto from 'crypto';
+(global as any).crypto = crypto;
+
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -29,4 +32,4 @@ import { User } from '../common/db/entities/user.entity';
   providers: [AppService],
   exports: [],
 })
-export class AppModule {}
+export class AppModule { }
